@@ -36,7 +36,7 @@ while True:
     line = ser.readline();
     fields = line.split(",");
     if fields[0] == "$GPGGA":
-        timeStr = fields[1][0:2] + ":" + fields[1][2:4] + ":" + fields[1][4:10]
+        timeStr = fields[1][0:2] + "-" + fields[1][2:4] + "-" + fields[1][4:10]
         print "Time: " + timeStr + ", Height: " + fields[9] + " m"
     outFile.write(line)
     
